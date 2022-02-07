@@ -1,0 +1,127 @@
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif; 
+
+}
+
+/* ENCABEZADO */
+
+header {
+    background-image: url(/img/camuflado\ militar.jpg);
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* MENU */
+
+nav li a {
+    color: black;
+    font-weight: bolder;
+    background-color: #729677;
+    margin: 5px;
+    border: solid 1px black;
+}
+
+
+.d-flex button {
+    background-color: #729677;
+    color: black;
+}
+
+
+.container-fluid {
+    background-color: #729677;
+}
+
+
+/* INICIO */
+
+.cuerpoinicio {
+    display: flex;
+    flex-direction: column;
+justify-content: space-evenly;
+    text-align: center;
+    height: 500px;
+}
+/* CARROUSEL */
+
+
+
+.carousel-item active {
+    height: 400px;
+    width: 600px;
+}
+
+.carousel-item {
+    height: 400px;
+    width: 600px;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer ul li {
+    color: #3a5e40;
+    text-transform: uppercase;
+        line-height: 35px;
+        list-style-type: none;
+}
+
+.copy {
+    margin-top: 60px;
+}
+
+.logos {
+    height: 40px;
+}
+
+.logosrs {
+    display: inline;
+}
+
+.mapa {
+    margin-top: 12px;
+    margin-right: 180px;
+}
+
+.datosContacto {
+    margin-left: -15px;
+}
+
+.listaSiguenos {
+margin-right: 15px;
+margin-top: 50px;
+}
+
+
+/* EXPERIENCIAS */
+
+.imgExp {
+    width: 300px;
+    height: 300px;
+}
+
+.container {
+    display: flex;
+    align-items: center
+}
+
+.col {
+    text-align: center;
+    align-items: baseline;
+}
