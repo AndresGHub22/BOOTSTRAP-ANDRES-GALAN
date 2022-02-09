@@ -34,6 +34,19 @@ nav li a {
     background-color: #729677;
 }
 
+.transicion {
+transition: all 700ms
+}
+
+.transicion:hover {
+    border: solid 1px black;
+    background-color: #63d471;
+background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+
+
+    
+}
+
 
 /* INICIO */
 
@@ -117,6 +130,7 @@ margin-top: 50px;
 }
 
 .container {
+    margin-top: 50px;
     display: flex;
     align-items: center
 }
@@ -124,4 +138,61 @@ margin-top: 50px;
 .col {
     text-align: center;
     align-items: baseline;
+}
+
+.imgBarraBrava {
+    margin-top: 30px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    footer {
+        background-color: black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    
+
+}
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    footer {
+        background-color: black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .mapa {
+        margin-left: 180px;
+    }
+
+    .copy {
+        margin-left: 5px;
+    }
+
+    .datosContacto {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .datosContacto li {
+        text-align: center;
+    }
+
+    .imgBarraBrava {
+        margin-top: 3px;
+    }
 }
