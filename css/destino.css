@@ -1,0 +1,21 @@
+/* HOLA */
+/* ESTILOS GENERALES */
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #729677; }
+
+.mainFavelas {
+  width: 100vh; }
+  .mainFavelas h1 {
+    text-align: center; }
+  .mainFavelas .cuerpoFavelas {
+    height: 945px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 15px 300px 15px 300px 15px; }
+    .mainFavelas .cuerpoFavelas article img {
+      height: 300px;
+      width: 300px; }
+    .mainFavelas .cuerpoFavelas article p {
+      height: 15px;
+      width: 300px; }
