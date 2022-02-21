@@ -1,21 +1,289 @@
+@charset "UTF-8";
 /* HOLA */
+/* HOLA 2*/
+/* HOLA 3 */
+/* VARIABLES */
+/* IMPORT */
+/* EXTENDS */
+.imgguiaRio, .imgguiaParis, .imgguiaBa {
+  width: 400px;
+  height: 400px;
+  border: solid 1px green; }
+
+.imgguiaParis {
+  border: solid 1px red; }
+
+.imgguiaBa {
+  border: solid 1px lightblue; }
+
+/* MIXINS */
+.imgFavelas {
+  width: 300px;
+  height: 300px; }
+
 /* ESTILOS GENERALES */
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
   background-color: #729677; }
 
+/* ENCABEZADO */
+header {
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url(/img/rio/MILI.jpg); }
+
+/* MENU */
+nav .container-fluid {
+  background-color: #729677; }
+  nav .container-fluid div ul li a {
+    color: black;
+    font-weight: bolder;
+    background-color: #729677;
+    margin: 5px;
+    border: solid 1px black; }
+  nav .container-fluid div .d-flex button {
+    background-color: #729677;
+    color: black; }
+  nav .container-fluid div .transicion {
+    transition: all 700ms; }
+  nav .container-fluid div .transicion:hover {
+    border: solid 1px black;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%); }
+
+/* INICIO */
+/* Carrousel */
+#carouselExampleIndicators .carousel-inner {
+  margin-top: 50px;
+  margin-bottom: 5px; }
+  #carouselExampleIndicators .carousel-inner .carousel-item active {
+    height: 400px;
+    width: 600px;
+    text-align: center; }
+  #carouselExampleIndicators .carousel-inner .carousel-item {
+    text-align: center;
+    height: 400px;
+    width: 600px; }
+
+.cuerpoinicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 500px; }
+  .cuerpoinicio h1 {
+    font-size: 40px bold; }
+  .cuerpoinicio h2 {
+    color: black;
+    text-decoration: none; }
+    .cuerpoinicio h2:hover {
+      text-decoration: underline;
+      color: #324d36; }
+
+/* NOSOTROS */
+.cuerpoNosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify; }
+  .cuerpoNosotros article {
+    text-align: justify; }
+    .cuerpoNosotros article h1 {
+      text-align: center; }
+
+/* EXPERIENCIAS */
+.container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center; }
+  .container .col {
+    text-align: center;
+    align-items: baseline; }
+    .container .col .imgExp {
+      width: 300px;
+      height: 300px; }
+    .container .col p a {
+      text-decoration: none; }
+      .container .col p a:hover {
+        text-decoration: underline;
+        color: #324d36; }
+
+/* ERES GUÍA */
+.mainGuias .cuerpoGuias {
+  margin-top: 130px; }
+  .mainGuias .cuerpoGuias h1 {
+    font-size: 40px bold;
+    text-align: center; }
+  .mainGuias .cuerpoGuias p {
+    font-size: 150%;
+    text-align: center;
+    margin-top: 100px; }
+    .mainGuias .cuerpoGuias p a {
+      color: black;
+      text-decoration: none; }
+      .mainGuias .cuerpoGuias p a:hover {
+        text-decoration: underline;
+        color: #324d36; }
+
+.mainGuias .galeriaGuias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center; }
+  .mainGuias .galeriaGuias .imgguiaRio, .mainGuias .galeriaGuias .imgguiaParis, .mainGuias .galeriaGuias .imgguiaBa {
+    width: 400px;
+    height: 400px;
+    border: solid 1px green; }
+
+/* CONTACTO */
+.contacto {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 600px;
+  grid-template-areas: "cuerpo formulario"; }
+  .contacto .cuerpoContacto {
+    grid-area: cuerpo;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contacto .cuerpoContacto h1 {
+      text-align: center; }
+    .contacto .cuerpoContacto p {
+      font-size: 150%;
+      margin-top: 50px;
+      text-align: center;
+      width: 250px; }
+  .contacto .formulario {
+    grid-area: formulario; }
+    .contacto .formulario .field {
+      display: flex;
+      flex-direction: column; }
+      .contacto .formulario .field input {
+        width: 350px;
+        margin-bottom: 20px; }
+      .contacto .formulario .field h3 {
+        margin-bottom: 10px; }
+      .contacto .formulario .field .prefTel .radio {
+        margin-left: 10px; }
+      .contacto .formulario .field .prefMail .radio {
+        margin-left: 10px; }
+      .contacto .formulario .field .consulta {
+        width: 500px; }
+
+/* FAVELAS */
 .mainFavelas {
-  width: 100vh; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1000px;
+  width: 100%; }
   .mainFavelas h1 {
     text-align: center; }
   .mainFavelas .cuerpoFavelas {
-    height: 945px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: 900px;
     display: grid;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 300px 15px 300px 15px 300px 15px; }
-    .mainFavelas .cuerpoFavelas article img {
-      height: 300px;
-      width: 300px; }
-    .mainFavelas .cuerpoFavelas article p {
-      height: 15px;
-      width: 300px; }
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "im1 im2 im3" "im4 im5 im6" "im7 im8 im9"; }
+    .mainFavelas .cuerpoFavelas .articulo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 300px;
+      height: 315px; }
+      .mainFavelas .cuerpoFavelas .articulo .imgFavelas {
+        width: 300px;
+        height: 300px; }
+      .mainFavelas .cuerpoFavelas .articulo p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #729677;
+        font-size: 10px;
+        height: 15px;
+        background-color: black; }
+      .mainFavelas .cuerpoFavelas .articulo .bordeInterno {
+        border-left: solid 1px white;
+        border-right: solid 1px white; }
+      .mainFavelas .cuerpoFavelas .articulo .bordeSuperior {
+        border-top: solid 1px white; }
+      .mainFavelas .cuerpoFavelas .articulo .bordeInferior {
+        border-bottom: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im1 {
+      grid-area: im1;
+      border-top: solid 1px white;
+      border-left: solid 1px white;
+      border-right: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im2 {
+      grid-area: im2;
+      border-top: solid 1px white;
+      border-left: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im3 {
+      grid-area: im3;
+      border-top: solid 1px white;
+      border-left: solid 1px white;
+      border-right: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im4 {
+      grid-area: im4;
+      border-left: solid 1px white;
+      border-right: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im5 {
+      grid-area: im5;
+      border-left: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im6 {
+      grid-area: im6;
+      border-left: solid 1px white;
+      border-right: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im7 {
+      grid-area: im7;
+      border-bottom: solid 1px white;
+      border-left: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im8 {
+      grid-area: im8;
+      border-bottom: solid 1px white;
+      border-left: solid 1px white; }
+    .mainFavelas .cuerpoFavelas .im9 {
+      grid-area: im9;
+      border-bottom: solid 1px white;
+      border-left: solid 1px white;
+      border-right: solid 1px white; }
+
+/* FOOTER */
+footer {
+  margin-top: 30px;
+  background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%; }
+  footer .datosContacto {
+    color: #3a5e40;
+    margin-left: -15px;
+    text-transform: uppercase;
+    line-height: 35px;
+    list-style-type: none; }
+    footer .datosContacto .copy {
+      margin-top: 60px; }
+  footer .mapa {
+    margin-top: 12px;
+    margin-right: 180px; }
+  footer .listaSiguenos {
+    color: #3a5e40;
+    text-transform: uppercase;
+    line-height: 35px;
+    list-style-type: none;
+    margin-right: 15px;
+    margin-top: 50px; }
+    footer .listaSiguenos .logosrs {
+      display: inline; }
+      footer .listaSiguenos .logosrs .logos {
+        height: 40px; }

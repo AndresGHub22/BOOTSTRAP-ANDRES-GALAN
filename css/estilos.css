@@ -7,7 +7,7 @@ body {
 /* ENCABEZADO */
 
 header {
-    background-image: url(/img/camuflado\ militar.jpg);
+    background-image: url(/img/rio/MILI.jpg);
     height: 100px;
     display: flex;
     justify-content: flex-start;
@@ -135,7 +135,7 @@ margin-top: 50px;
 .container {
     margin-top: 50px;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .col {
