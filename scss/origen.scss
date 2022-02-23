@@ -103,7 +103,9 @@ nav {
 /* INICIO */
 
 
-/* Carrousel */
+.mainInicio {
+
+
 
 #carouselExampleIndicators {
 
@@ -141,15 +143,28 @@ justify-content: space-evenly;
     h2 {
         color: black;
         text-decoration: none;
-
         
+        a {
+
+            color: black;
+            text-decoration: none;
             &:hover {
-                text-decoration: underline;
+                
                 color: #324d36;
             }
+
+        }
+        
+        
         
     }
 }
+
+
+}
+
+
+
 
 
 /* NOSOTROS */
@@ -173,35 +188,41 @@ justify-content: space-evenly;
 
 /* EXPERIENCIAS */
 
-.container {
+.mainExperiencias {
 
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
+    .container {
 
-    .col {
-        text-align: center;
-    align-items: baseline;
-
-    .imgExp {
-        width: 300px;
-        height: 300px;
-    }
-
-      p {
-
-        a { 
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-                color: #324d36 ;
-            }
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+    
+        .col {
+            text-align: center;
+        align-items: baseline;
+    
+        .imgExp {
+            width: 300px;
+            height: 300px;
         }
-      }
+    
+          p {
+    
+            a { 
+                text-decoration: underline;
+                &:hover {
+                    
+                    color: #324d36 ;
+                }
+            }
+          }
+        }
+    
+       
     }
 
-   
 }
+
+
 
 /* ERES GUÍA */
 

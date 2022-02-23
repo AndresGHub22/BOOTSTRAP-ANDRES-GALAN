@@ -55,33 +55,34 @@ nav .container-fluid {
     background-image: linear-gradient(315deg, #63d471 0%, #233329 74%); }
 
 /* INICIO */
-/* Carrousel */
-#carouselExampleIndicators .carousel-inner {
+.mainInicio #carouselExampleIndicators .carousel-inner {
   margin-top: 50px;
   margin-bottom: 5px; }
-  #carouselExampleIndicators .carousel-inner .carousel-item active {
+  .mainInicio #carouselExampleIndicators .carousel-inner .carousel-item active {
     height: 400px;
     width: 600px;
     text-align: center; }
-  #carouselExampleIndicators .carousel-inner .carousel-item {
+  .mainInicio #carouselExampleIndicators .carousel-inner .carousel-item {
     text-align: center;
     height: 400px;
     width: 600px; }
 
-.cuerpoinicio {
+.mainInicio .cuerpoinicio {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
   height: 500px; }
-  .cuerpoinicio h1 {
+  .mainInicio .cuerpoinicio h1 {
     font-size: 40px bold; }
-  .cuerpoinicio h2 {
+  .mainInicio .cuerpoinicio h2 {
     color: black;
     text-decoration: none; }
-    .cuerpoinicio h2:hover {
-      text-decoration: underline;
-      color: #324d36; }
+    .mainInicio .cuerpoinicio h2 a {
+      color: black;
+      text-decoration: none; }
+      .mainInicio .cuerpoinicio h2 a:hover {
+        color: #324d36; }
 
 /* NOSOTROS */
 .cuerpoNosotros {
@@ -96,20 +97,19 @@ nav .container-fluid {
       text-align: center; }
 
 /* EXPERIENCIAS */
-.container {
+.mainExperiencias .container {
   margin-top: 50px;
   display: flex;
   align-items: center; }
-  .container .col {
+  .mainExperiencias .container .col {
     text-align: center;
     align-items: baseline; }
-    .container .col .imgExp {
+    .mainExperiencias .container .col .imgExp {
       width: 300px;
       height: 300px; }
-    .container .col p a {
-      text-decoration: none; }
-      .container .col p a:hover {
-        text-decoration: underline;
+    .mainExperiencias .container .col p a {
+      text-decoration: underline; }
+      .mainExperiencias .container .col p a:hover {
         color: #324d36; }
 
 /* ERES GUÍA */
