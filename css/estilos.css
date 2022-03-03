@@ -24,6 +24,7 @@ nav li a {
 }
 
 
+
 .d-flex button {
     background-color: #729677;
     color: black;
@@ -150,7 +151,7 @@ margin-top: 50px;
 
 /* MOBILE */
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
 
     footer {
         background-color: black;
@@ -162,10 +163,10 @@ margin-top: 50px;
     }
     
 
-}
+}*/
 
-
-@media (min-width: 481px) and (max-width: 1024px) {
+/* MOBILE */
+@media (max-width: 767px) {
 
     footer {
         background-color: black;
@@ -211,4 +212,38 @@ margin-top: 50px;
     .listaSiguenos {
         margin-right: 30px;
     }
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    footer {
+        background-color: black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .mapa {
+        margin-left: 180px;
+    }
+
+    .copy {
+        margin-left: 5px;
+    }
+
+    .datosContacto {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .datosContacto li {
+        text-align: center;
+    }
+
 }

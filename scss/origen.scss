@@ -16,6 +16,7 @@ $estiloh1mob: 20px bold;
 
 @import "extend-mixins";
 
+
    
 
 
@@ -56,9 +57,45 @@ nav {
 
             ul {
 
+               
+
+                    .dropdown-menu {
+                        width: 0px;
+                        height: 0px;
+                        background-color: #729677;
+                       margin-top: 0px;
+                       padding-top: 0px;
+                       border-style: none;
+                      
+                      
+
+                       .dropdown-item {
+                           width: 145px;
+                           text-align: center;
+                           font-size: 10px;
+                           text-transform: uppercase;
+                           margin-left: 7px;
+                           margin-top: 2px;
+
+                           &:hover {
+                               background-color: #3e5f42
+                           }
+                       }
+                    }
+                
+
                 li {
 
+
+
+                   
+
                     a {
+
+                         &hover {
+                        border: solid 10px black;
+                    background-color: #157020;
+                    }
 
                         color: black;
                         font-weight: bolder;
@@ -82,13 +119,15 @@ nav {
             }
 
             .transicion {
+                
                 transition: all 700ms
                 }
                 
                 .transicion:hover {
+                    
                     border: solid 1px black;
                     background-color: #63d471;
-                background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+                background-image: linear-gradient(315deg, #3e5f42 0%, #233329 74%);
                 
                 
                     
@@ -106,26 +145,29 @@ nav {
 .mainInicio {
 
 
+.slide {
 
-#carouselExampleIndicators {
+    
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     .carousel-inner {
-   
-        margin-top: 50px;
-        margin-bottom: 5px;
-
-        .carousel-item active {
-            height: 400px;
-            width: 600px;
-            text-align: center;
-        }
-
-        .carousel-item {
-            text-align: center;
-            height: 400px;
-            width: 600px;
-        }
+        height: 500px;
+        width: 800px;
     }
+    
+    
+   
+ 
+
+    }
+
+   
+
+    
+
 }
 
 .cuerpoinicio {
@@ -161,7 +203,7 @@ justify-content: space-evenly;
 }
 
 
-}
+
 
 
 
@@ -171,11 +213,13 @@ justify-content: space-evenly;
 
 .cuerpoNosotros {
 
+    margin: 50px 22px 50px 22px ;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: justify;
+    font-size: large;
 
     article {
         text-align: justify;
@@ -204,17 +248,35 @@ justify-content: space-evenly;
             width: 300px;
             height: 300px;
         }
-    
-          p {
-    
+
+        .imgBarraBrava {
+            margin-top: 30px;
+        }
+        
+        p {
+            
+            span {
+                font-weight: 2000;
+                text-decoration: underline;
+            }
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: justify;
+
             a { 
+                color: black;
                 text-decoration: underline;
                 &:hover {
                     
                     color: #324d36 ;
                 }
             }
-          }
+
+        }
+          
+    
+           
+          
         }
     
        
@@ -281,10 +343,10 @@ justify-content: space-evenly;
 /* CONTACTO */
 
 .contacto {
-margin-top: 100px;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: 600px;
+    grid-template-rows: 650px;
     grid-template-areas: 
     "cuerpo formulario";
 
@@ -341,7 +403,8 @@ margin-top: 100px;
         }
 
         .consulta {
-            width: 500px;
+            margin-top: 25px;
+            width: 350px;
         }
         
         
@@ -356,136 +419,93 @@ margin-top: 100px;
     
 }
 /* FAVELAS */ 
+
+
+h1 {
+    text-align: center;
+}
+
 .mainFavelas {
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    height: 1000px;
-    width: 100%;
+  
 
 
 
 
-    h1 {
-        text-align: center;
-    }
+    
 
     .cuerpoFavelas {
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        
+        width: 900px;
         height: 900px;
         display: grid;
-        grid-template-columns: 300px 300px 300px;
+        grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
         grid-template-areas:
             "im1 im2 im3"
             "im4 im5 im6"
-            "im7 im8 im9"
-        ;
+            "im7 im8 im9";
 
-        .articulo {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 300px;
-            height: 315px;
+       
 
-            .imgFavelas {
-                width: 300px;
-                height: 300px;
-            }
+           
 
 
-            p {
-                margin-top: 0px;
-                margin-bottom: 0px;
-                color: #729677;
-                font-size: 10px;
-                height: 15px;
-                background-color: black;
+         
 
-
-            }
-
-            .bordeInterno {
-                border-left: solid 1px white;
-                border-right: solid 1px white;
-            }
-
-            .bordeSuperior {
-                border-top: solid 1px white;
-            }
-
-            .bordeInferior {
-                border-bottom: solid 1px white;
-            }
+          
 
 
 
-
-        }
+        
 
         .im1 {
             grid-area: im1;
-            border-top: solid 1px white;
-            border-left: solid 1px white;
-            border-right: solid 1px white;
+            
         }
 
         .im2 {
             grid-area: im2;
-            border-top: solid 1px white;
-            border-left: solid 1px white;
+            
         }
 
         .im3 {
             grid-area: im3;
-            border-top: solid 1px white;
-            border-left: solid 1px white;
-            border-right: solid 1px white;
+           
         }
 
         .im4 {
             grid-area: im4;
-            border-left: solid 1px white;
-            border-right: solid 1px white;
+           
         }
 
         .im5 {
             grid-area: im5;
-            border-left: solid 1px white;
+            
         }
 
         .im6 {
             grid-area: im6;
-            border-left: solid 1px white;
-            border-right: solid 1px white;
+           
         }
 
         .im7 {
             grid-area: im7;
-            border-bottom: solid 1px white;
-            border-left: solid 1px white;
+           
 
         }
 
         .im8 {
             grid-area: im8;
-            border-bottom: solid 1px white;
-            border-left: solid 1px white;
+           
         }
 
         .im9 {
             grid-area: im9;
-            border-bottom: solid 1px white;
-            border-left: solid 1px white;
-            border-right: solid 1px white;
+           
         }
 
 
@@ -541,4 +561,272 @@ footer {
             }
         }
         }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+
+    /* MENÚ */ 
+
+
+    .container-fluid {
+
+
+        
+
+
+        ul {
+            width: 150px;
+
+         
+
+            li {
+                margin-left: -3px;
+
+               
+            }
+        }
+
+        
+    }
+
+    nav li a {
+        margin-left: 5px;
+        text-align: center;
+    }
+
+    nav li {
+        margin-left: -1px;
+    }
+
+
+    /* INICIO */ 
+
+    /* Carrousel */ 
+
+    .carousel-indicators {
+        margin-bottom: 180px;
+    }
+
+    .carousel-control-prev {
+        
+        margin-bottom: 150px ;
+    }
+
+    .carousel-control-next {
+      
+        margin-bottom: 150px
+    }
+ 
+    /* FOOTER */ 
+
+
+    footer {
+        background-color: black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .mapa {
+        margin-left: 180px;
+    }
+
+    .copy {
+        margin-left: 5px;
+    }
+
+    .datosContacto {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .datosContacto li {
+        text-align: center;
+    }
+    
+    
+   
+
+    .listaSiguenos {
+        margin-right: 30px;
+    }
+
+
+    /* EXPERIENCIAS */ 
+
+
+    .imgBarraBrava {
+        margin-top: 3px;
+    }
+
+   /* FAVELAS */ 
+
+   h1 {
+    text-align: center;
+}
+
+   .mainFavelas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  
+
+
+
+
+    
+
+    .cuerpoFavelas {
+       border: solid 1px black;
+       width: 100%;
+       height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "im1 im2 im3"
+            "im4 im5 im6"
+            "im7 im8 im9";
+
+       
+
+           
+
+
+         
+.imgFavelas {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+        
+
+        .im1 {
+            grid-area: im1;
+            
+        }
+
+        .im2 {
+            grid-area: im2;
+            
+        }
+
+        .im3 {
+            grid-area: im3;
+           
+        }
+
+        .im4 {
+            grid-area: im4;
+           
+        }
+
+        .im5 {
+            grid-area: im5;
+            
+        }
+
+        .im6 {
+            grid-area: im6;
+           
+        }
+
+        .im7 {
+            grid-area: im7;
+           
+
+        }
+
+        .im8 {
+            grid-area: im8;
+           
+        }
+
+        .im9 {
+            grid-area: im9;
+           
+        }
+
+
+
+
+
+
+
+    }
+
+}
+   
+
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+
+    /* MENU */ 
+
+
+    .container-fluid {
+
+        
+
+        ul {
+            width: 150px;
+
+            li {
+                margin-left: -3px;
+                text-align: center;
+            }
+        }
+
+        
+    }
+
+   
+
+ 
+   
+
+    /* FOOTER */ 
+
+
+    footer {
+        background-color: black;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .mapa {
+        margin-left: 180px;
+    }
+
+    .copy {
+        margin-left: 5px;
+    }
+
+    .datosContacto {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .datosContacto li {
+        text-align: center;
+    }
+
 }
