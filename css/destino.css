@@ -24,7 +24,8 @@
 /* ESTILOS GENERALES */
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
-  background-color: #729677; }
+  background-color: #729677;
+  width: 100%; }
 
 /* ENCABEZADO */
 header {
@@ -33,11 +34,15 @@ header {
   height: 100px;
   display: flex;
   justify-content: flex-start;
-  background-image: url(/img/rio/MILI.jpg); }
+  background-image: url(/img/rio/MILI.jpg);
+  background-attachment: fixed; }
 
 /* MENU */
 nav .container-fluid {
   background-color: #729677; }
+  nav .container-fluid div ul .nav-item:hover {
+    color: black;
+    background-color: #233329; }
   nav .container-fluid div ul .dropdown-menu {
     width: 0px;
     height: 0px;
@@ -51,7 +56,7 @@ nav .container-fluid {
       font-size: 10px;
       text-transform: uppercase;
       margin-left: 7px;
-      margin-top: 2px; }
+      margin-top: -7px; }
       nav .container-fluid div ul .dropdown-menu .dropdown-item:hover {
         background-color: #3e5f42; }
   nav .container-fluid div ul li a {
@@ -66,12 +71,6 @@ nav .container-fluid {
   nav .container-fluid div .d-flex button {
     background-color: #729677;
     color: black; }
-  nav .container-fluid div .transicion {
-    transition: all 700ms; }
-  nav .container-fluid div .transicion:hover {
-    border: solid 1px black;
-    background-color: #63d471;
-    background-image: linear-gradient(315deg, #3e5f42 0%, #233329 74%); }
 
 /* INICIO */
 .mainInicio .slide {
@@ -149,7 +148,9 @@ nav .container-fluid {
   .mainGuias .cuerpoGuias p {
     font-size: 150%;
     text-align: center;
-    margin-top: 100px; }
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px; }
     .mainGuias .cuerpoGuias p a {
       color: black;
       text-decoration: none; }
@@ -171,8 +172,7 @@ nav .container-fluid {
 .contacto {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-template-rows: 650px;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "cuerpo formulario"; }
   .contacto .cuerpoContacto {
     grid-area: cuerpo;
@@ -187,7 +187,8 @@ nav .container-fluid {
       text-align: center;
       width: 250px; }
   .contacto .formulario {
-    grid-area: formulario; }
+    grid-area: formulario;
+    margin-left: 200px; }
     .contacto .formulario .field {
       display: flex;
       flex-direction: column; }
@@ -310,6 +311,9 @@ footer {
     text-align: center; }
   .listaSiguenos {
     margin-right: 30px; }
+  /* NOSOTROS */
+  .video {
+    width: 100%; }
   /* EXPERIENCIAS */
   .imgBarraBrava {
     margin-top: 3px; }
@@ -349,32 +353,125 @@ footer {
       .mainFavelas .cuerpoFavelas .im8 {
         grid-area: im8; }
       .mainFavelas .cuerpoFavelas .im9 {
-        grid-area: im9; } }
+        grid-area: im9; }
+  /* CONTACTO */
+  .contacto {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "cuerpo" "formulario";
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .contacto .cuerpoContacto {
+      grid-area: cuerpo;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .contacto .cuerpoContacto h1 {
+        text-align: center; }
+      .contacto .cuerpoContacto p {
+        font-size: 100%;
+        margin-top: 50px;
+        text-align: center;
+        width: 250px; }
+    .contacto .formulario {
+      grid-area: formulario;
+      margin-top: 0px; }
+      .contacto .formulario .field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .contacto .formulario .field input {
+          width: 250px;
+          margin-bottom: 20px; }
+        .contacto .formulario .field h3 {
+          margin-bottom: 10px; }
+        .contacto .formulario .field .prefTel .radio {
+          margin-left: 10px; }
+        .contacto .formulario .field .prefMail .radio {
+          margin-left: 10px; }
+        .contacto .formulario .field .consulta {
+          margin-top: 25px;
+          width: 250px; } }
 
 /* TABLET */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1200px) {
+  body {
+    width: 100%; }
+  /* HEADER */
+  header {
+    width: 100vw; }
   /* MENU */
   .container-fluid ul {
     width: 150px; }
     .container-fluid ul li {
       margin-left: -3px;
       text-align: center; }
+      .container-fluid ul li .nav-item {
+        width: 153px;
+        height: 52px; }
+  /* NOSOTROS */
+  /* FAVELAS */
+  .mainFavelas {
+    width: 100%; }
+  /* CONTACTO */
+  .contacto {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "cuerpo formulario"; }
+    .contacto .cuerpoContacto {
+      grid-area: cuerpo;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .contacto .cuerpoContacto h1 {
+        text-align: center; }
+      .contacto .cuerpoContacto p {
+        font-size: 130%;
+        margin-top: 50px;
+        text-align: center;
+        width: 250px; }
+    .contacto .formulario {
+      grid-area: formulario;
+      margin-left: 100px; }
+      .contacto .formulario .field {
+        display: flex;
+        flex-direction: column; }
+        .contacto .formulario .field input {
+          width: 350px;
+          margin-bottom: 20px; }
+        .contacto .formulario .field h3 {
+          margin-bottom: 10px; }
+        .contacto .formulario .field .prefTel .radio {
+          margin-left: 10px; }
+        .contacto .formulario .field .prefMail .radio {
+          margin-left: 10px; }
+        .contacto .formulario .field .consulta {
+          margin-top: 25px;
+          width: 350px; }
   /* FOOTER */
   footer {
     background-color: black;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     align-items: center; }
   .mapa {
-    margin-left: 180px; }
+    margin-left: 5px;
+    margin-right: 5px; }
   .copy {
     margin-left: 5px; }
   .datosContacto {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    margin-right: 20px; }
+    margin-right: 5px; }
   .datosContacto li {
-    text-align: center; } }
+    text-align: center; }
+  .listaSiguenos {
+    margin-right: 0px;
+    margin-left: -150px; } }

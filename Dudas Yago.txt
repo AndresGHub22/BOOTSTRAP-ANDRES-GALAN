@@ -1,0 +1,175 @@
+Man
+
+El proyecto es de 5 páginas: index; nosotros; experiencias; eres guia; contacto y favelas (dentro de experiencias)
+Te paso a decir primero los problemas operativos que tengo, y despues quizas alguna duda de estilos. Si el codigo te parece un frankesnstein es que lo fui haciendo clase a clase segun laas cosas que iba viendo, por eso tiene algo de bootstrap, sass, etc.
+
+- El responsive:
+
+La version mobile creo que está bien. En todas las paginas queda en columna el footer.
+
+Pero en tablet no. Fijate que en "favelas" en el tamaño tablet queda un pedacito hacia la derecha de fondo verde  despues del header y el footer. Se que es por el tamaño de la grilla donde estan las fotos en esa pagina, pero he probado poner esa grilla en width: 100vw o width: 100%, donde supuestamente tendria que ocupar el ancho total de la pantalla en esa medida, pero sigue quedando ese espacio de fondo. Hay algo de esto del responsive que no estoy entendiendo. Quizas el tamaño desktop no es 1200 px sino menos. No se...
+
+- La página contacto:
+
+En el tamaño tablet, quise pasar el formulario debajo del texto, pasándolo a columna, y convertí al main (que contiene al texto y al formulario) a flex para alinear al centro de la pantalla esos dos elementos en vertical. Pero el formulario no se me alinea al centro.
+
+En el sass está separado con comentario. Bajando está la seccion /* CONTACTO */
+
+en la version desktop, este es el codigo: Abajo te pongo como lo hice para la versión mobile
+
+/* CONTACTO */
+
+.contacto {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "cuerpo formulario";
+
+    .cuerpoContacto {
+        grid-area: cuerpo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 150%;
+            margin-top: 50px;
+            text-align: center;
+            width: 250px;
+        }
+
+}
+
+    .formulario {
+        grid-area: formulario;
+        margin-left: 200px;
+
+        .field {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                width: 350px;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+
+                margin-bottom: 10px;
+            }
+
+            .prefTel {
+
+                .radio {
+                    margin-left: 10px;
+                }
+            }
+
+            .prefMail {
+
+                .radio {
+                    margin-left: 10px;
+                }
+
+            }
+
+            .consulta {
+                margin-top: 25px;
+                width: 350px;
+            }
+}
+}
+
+
+VERSIÓN MOBILE:
+
+
+/* CONTACTO */
+
+    .contacto {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "cuerpo"
+            "formulario";
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .cuerpoContacto {
+            grid-area: cuerpo;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 100%;
+                margin-top: 50px;
+                text-align: center;
+                width: 250px;
+            }
+
+ }
+
+        .formulario {
+            grid-area: formulario;
+
+            margin-top: 0px;
+
+
+            .field {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+
+                input {
+                    width: 250px;
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+
+                    margin-bottom: 10px;
+                }
+
+                .prefTel {
+
+                    .radio {
+                        margin-left: 10px;
+                    }
+                }
+
+                .prefMail {
+
+                    .radio {
+                        margin-left: 10px;
+                    }
+
+                }
+
+                .consulta {
+                    margin-top: 25px;
+                    width: 250px;
+                }
+}
+}
+
+
+--También lo voy a tener que subir al GitHub al repositorio que tengo, y luego a un servidor, pero en ambos tengo que ignorar  el nodemodules, y no se como aplicar el GitIgnore.
+
+
+--Te paso esto y voy viendo que mas preguntarte. Graciass

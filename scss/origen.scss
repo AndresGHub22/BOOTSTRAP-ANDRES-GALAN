@@ -5,19 +5,19 @@
 /* HOLA 3 */
 
 
-/* VARIABLES */ 
+/* VARIABLES */
 
 $color: #729677;
 
 $estiloh1: 40px bold;
 $estiloh1mob: 20px bold;
 
-/* IMPORT */ 
+/* IMPORT */
 
 @import "extend-mixins";
 
 
-   
+
 
 
 
@@ -28,6 +28,7 @@ $estiloh1mob: 20px bold;
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
     background-color: #729677;
+    width: 100%;
 
 }
 
@@ -35,11 +36,12 @@ body {
 
 header {
     padding: 10px;
-width: 100%;
+    width: 100%;
     height: 100px;
     display: flex;
     justify-content: flex-start;
     background-image: url(/img/rio/MILI.jpg);
+    background-attachment: fixed;
 }
 
 
@@ -57,45 +59,50 @@ nav {
 
             ul {
 
-               
+                .nav-item:hover {
+                    color: black;
+                    background-color: #233329;
+                }
 
-                    .dropdown-menu {
-                        width: 0px;
-                        height: 0px;
-                        background-color: #729677;
-                       margin-top: 0px;
-                       padding-top: 0px;
-                       border-style: none;
-                      
-                      
 
-                       .dropdown-item {
-                           width: 145px;
-                           text-align: center;
-                           font-size: 10px;
-                           text-transform: uppercase;
-                           margin-left: 7px;
-                           margin-top: 2px;
 
-                           &:hover {
-                               background-color: #3e5f42
-                           }
-                       }
+                .dropdown-menu {
+                    width: 0px;
+                    height: 0px;
+                    background-color: #729677;
+                    margin-top: 0px;
+                    padding-top: 0px;
+                    border-style: none;
+
+
+
+                    .dropdown-item {
+                        width: 145px;
+                        text-align: center;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        margin-left: 7px;
+                        margin-top: -7px;
+
+                        &:hover {
+                            background-color: #3e5f42
+                        }
                     }
-                
+                }
+
 
                 li {
 
 
 
-                   
+
 
                     a {
 
-                         &hover {
-                        border: solid 10px black;
-                    background-color: #157020;
-                    }
+                        &hover {
+                            border: solid 10px black;
+                            background-color: #157020;
+                        }
 
                         color: black;
                         font-weight: bolder;
@@ -118,20 +125,20 @@ nav {
                 }
             }
 
-            .transicion {
-                
-                transition: all 700ms
-                }
-                
-                .transicion:hover {
-                    
-                    border: solid 1px black;
-                    background-color: #63d471;
-                background-image: linear-gradient(315deg, #3e5f42 0%, #233329 74%);
-                
-                
-                    
-                }
+            // .transicion {
+
+            //     transition: all 700ms
+            //     }
+
+            //     .transicion:hover {
+
+            //         border: solid 1px black;
+            //         background-color: #63d471;
+            //     background-image: linear-gradient(315deg, #3e5f42 0%, #233329 74%);
+
+
+
+            //     }
         }
     }
 
@@ -145,35 +152,35 @@ nav {
 .mainInicio {
 
 
-.slide {
+    .slide {
 
-    
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
-    .carousel-inner {
-        height: 500px;
-        width: 800px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .carousel-inner {
+            height: 500px;
+            width: 800px;
+        }
+
+
+
+
+
     }
-    
-    
-   
- 
 
-    }
 
-   
 
-    
+
 
 }
 
 .cuerpoinicio {
     display: flex;
     flex-direction: column;
-justify-content: space-evenly;
+    justify-content: space-evenly;
     text-align: center;
     height: 500px;
 
@@ -185,20 +192,21 @@ justify-content: space-evenly;
     h2 {
         color: black;
         text-decoration: none;
-        
+
         a {
 
             color: black;
             text-decoration: none;
+
             &:hover {
-                
+
                 color: #324d36;
             }
 
         }
-        
-        
-        
+
+
+
     }
 }
 
@@ -213,7 +221,7 @@ justify-content: space-evenly;
 
 .cuerpoNosotros {
 
-    margin: 50px 22px 50px 22px ;
+    margin: 50px 22px 50px 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,47 +247,49 @@ justify-content: space-evenly;
         margin-top: 50px;
         display: flex;
         align-items: center;
-    
+
         .col {
             text-align: center;
-        align-items: baseline;
-    
-        .imgExp {
-            width: 300px;
-            height: 300px;
-        }
+            align-items: baseline;
 
-        .imgBarraBrava {
-            margin-top: 30px;
-        }
-        
-        p {
-            
-            span {
-                font-weight: 2000;
-                text-decoration: underline;
+            .imgExp {
+                width: 300px;
+                height: 300px;
             }
-            margin-top: 20px;
-            font-weight: bold;
-            text-align: justify;
 
-            a { 
-                color: black;
-                text-decoration: underline;
-                &:hover {
-                    
-                    color: #324d36 ;
+            .imgBarraBrava {
+                margin-top: 30px;
+            }
+
+            p {
+
+                span {
+                    font-weight: 2000;
+                    text-decoration: underline;
                 }
+
+                margin-top: 20px;
+                font-weight: bold;
+                text-align: justify;
+
+                a {
+                    color: black;
+                    text-decoration: underline;
+
+                    &:hover {
+
+                        color: #324d36;
+                    }
+                }
+
             }
 
+
+
+
         }
-          
-    
-           
-          
-        }
-    
-       
+
+
     }
 
 }
@@ -294,7 +304,7 @@ justify-content: space-evenly;
 
         margin-top: 130px;
 
-        
+
 
         h1 {
             font-size: $estiloh1;
@@ -306,10 +316,13 @@ justify-content: space-evenly;
             font-size: 150%;
             text-align: center;
             margin-top: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
 
             a {
                 color: black;
                 text-decoration: none;
+
                 &:hover {
                     text-decoration: underline;
                     color: #324d36;
@@ -345,20 +358,21 @@ justify-content: space-evenly;
 .contacto {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: 650px;
-    grid-template-areas: 
-    "cuerpo formulario";
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "cuerpo formulario";
 
     .cuerpoContacto {
         grid-area: cuerpo;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
         h1 {
             text-align: center;
         }
+
         p {
             font-size: 150%;
             margin-top: 50px;
@@ -372,53 +386,55 @@ justify-content: space-evenly;
 
     .formulario {
         grid-area: formulario;
-        
+        margin-left: 200px;
+
         .field {
             display: flex;
-        flex-direction: column;
+            flex-direction: column;
 
-        input {
-            width: 350px;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-
-            margin-bottom: 10px;
-        }
-
-        .prefTel {
-        
-            .radio {
-                margin-left: 10px;
-            }
-        }
-
-        .prefMail {
-
-            .radio {
-                margin-left: 10px;
+            input {
+                width: 350px;
+                margin-bottom: 20px;
             }
 
+            h3 {
+
+                margin-bottom: 10px;
+            }
+
+            .prefTel {
+
+                .radio {
+                    margin-left: 10px;
+                }
+            }
+
+            .prefMail {
+
+                .radio {
+                    margin-left: 10px;
+                }
+
+            }
+
+            .consulta {
+                margin-top: 25px;
+                width: 350px;
+            }
+
+
+
+
+
         }
 
-        .consulta {
-            margin-top: 25px;
-            width: 350px;
-        }
-        
-        
 
-        
-            
-        }
+    }
 
-        
-        }
 
-    
 }
-/* FAVELAS */ 
+
+/* FAVELAS */
 
 
 h1 {
@@ -430,12 +446,12 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-  
 
 
 
 
-    
+
+
 
     .cuerpoFavelas {
 
@@ -449,63 +465,63 @@ h1 {
             "im4 im5 im6"
             "im7 im8 im9";
 
-       
-
-           
-
-
-         
-
-          
 
 
 
-        
+
+
+
+
+
+
+
+
+
 
         .im1 {
             grid-area: im1;
-            
+
         }
 
         .im2 {
             grid-area: im2;
-            
+
         }
 
         .im3 {
             grid-area: im3;
-           
+
         }
 
         .im4 {
             grid-area: im4;
-           
+
         }
 
         .im5 {
             grid-area: im5;
-            
+
         }
 
         .im6 {
             grid-area: im6;
-           
+
         }
 
         .im7 {
             grid-area: im7;
-           
+
 
         }
 
         .im8 {
             grid-area: im8;
-           
+
         }
 
         .im9 {
             grid-area: im9;
-           
+
         }
 
 
@@ -560,35 +576,35 @@ footer {
                 height: 40px;
             }
         }
-        }
+    }
 }
 
 /* MOBILE */
 @media (max-width: 767px) {
 
 
-    /* MENÚ */ 
+    /* MENÚ */
 
 
     .container-fluid {
 
 
-        
+
 
 
         ul {
             width: 150px;
 
-         
+
 
             li {
                 margin-left: -3px;
 
-               
+
             }
         }
 
-        
+
     }
 
     nav li a {
@@ -601,25 +617,25 @@ footer {
     }
 
 
-    /* INICIO */ 
+    /* INICIO */
 
-    /* Carrousel */ 
+    /* Carrousel */
 
     .carousel-indicators {
         margin-bottom: 180px;
     }
 
     .carousel-control-prev {
-        
-        margin-bottom: 150px ;
+
+        margin-bottom: 150px;
     }
 
     .carousel-control-next {
-      
+
         margin-bottom: 150px
     }
- 
-    /* FOOTER */ 
+
+    /* FOOTER */
 
 
     footer {
@@ -630,7 +646,7 @@ footer {
         width: 100%;
         align-items: center;
     }
-    
+
     .mapa {
         margin-left: 180px;
     }
@@ -649,169 +665,372 @@ footer {
     .datosContacto li {
         text-align: center;
     }
-    
-    
-   
+
+
+
 
     .listaSiguenos {
         margin-right: 30px;
     }
 
 
-    /* EXPERIENCIAS */ 
+    /* NOSOTROS */
+
+    .video {
+        width: 100%;
+    }
+
+    /* EXPERIENCIAS */
 
 
     .imgBarraBrava {
         margin-top: 3px;
     }
 
-   /* FAVELAS */ 
+    /* FAVELAS */
 
-   h1 {
-    text-align: center;
-}
+    h1 {
+        text-align: center;
+    }
 
-   .mainFavelas {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  
-
+    .mainFavelas {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
 
 
 
-    
 
-    .cuerpoFavelas {
-       border: solid 1px black;
-       width: 100%;
-       height: 100%;
+
+
+
+        .cuerpoFavelas {
+            border: solid 1px black;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "im1 im2 im3"
+                "im4 im5 im6"
+                "im7 im8 im9";
+
+
+
+
+
+
+
+            .imgFavelas {
+                width: 100%;
+                height: 100%;
+            }
+
+
+
+
+
+            .im1 {
+                grid-area: im1;
+
+            }
+
+            .im2 {
+                grid-area: im2;
+
+            }
+
+            .im3 {
+                grid-area: im3;
+
+            }
+
+            .im4 {
+                grid-area: im4;
+
+            }
+
+            .im5 {
+                grid-area: im5;
+
+            }
+
+            .im6 {
+                grid-area: im6;
+
+            }
+
+            .im7 {
+                grid-area: im7;
+
+
+            }
+
+            .im8 {
+                grid-area: im8;
+
+            }
+
+            .im9 {
+                grid-area: im9;
+
+            }
+
+
+
+
+
+
+
+        }
+
+    }
+
+    /* CONTACTO */
+
+    .contacto {
+        margin-top: 100px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas:
-            "im1 im2 im3"
-            "im4 im5 im6"
-            "im7 im8 im9";
+            "cuerpo"
+            "formulario";
 
-       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-           
+        .cuerpoContacto {
+            grid-area: cuerpo;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 100%;
+                margin-top: 50px;
+                text-align: center;
+                width: 250px;
+            }
 
 
-         
-.imgFavelas {
-    width: 100%;
-    height: 100%;
-}
-
-
-
-        
-
-        .im1 {
-            grid-area: im1;
-            
-        }
-
-        .im2 {
-            grid-area: im2;
-            
-        }
-
-        .im3 {
-            grid-area: im3;
-           
-        }
-
-        .im4 {
-            grid-area: im4;
-           
-        }
-
-        .im5 {
-            grid-area: im5;
-            
-        }
-
-        .im6 {
-            grid-area: im6;
-           
-        }
-
-        .im7 {
-            grid-area: im7;
-           
 
         }
 
-        .im8 {
-            grid-area: im8;
-           
+        .formulario {
+            grid-area: formulario;
+
+            margin-top: 0px;
+
+
+            .field {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+
+                input {
+                    width: 250px;
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+
+                    margin-bottom: 10px;
+                }
+
+                .prefTel {
+
+                    .radio {
+                        margin-left: 10px;
+                    }
+                }
+
+                .prefMail {
+
+                    .radio {
+                        margin-left: 10px;
+                    }
+
+                }
+
+                .consulta {
+                    margin-top: 25px;
+                    width: 250px;
+                }
+
+
+
+
+
+            }
+
+
         }
-
-        .im9 {
-            grid-area: im9;
-           
-        }
-
-
-
-
-
 
 
     }
 
-}
-   
 
 }
 
 /* TABLET */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 
 
-    /* MENU */ 
+    body {
+        width: 100%;
+    }
+
+    /* HEADER */
+
+    header {
+        width: 100vw;
+    }
+
+    /* MENU */
 
 
     .container-fluid {
 
-        
+
 
         ul {
             width: 150px;
 
             li {
+
+                .nav-item {
+                    width: 153px;
+                    height: 52px;
+                }
+
                 margin-left: -3px;
                 text-align: center;
             }
         }
 
-        
+
     }
 
-   
+    /* NOSOTROS */
 
- 
-   
 
-    /* FOOTER */ 
+    /* FAVELAS */
+
+    .mainFavelas {
+        width: 100%;
+
+
+    }
+
+
+    /* CONTACTO */
+
+    .contacto {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "cuerpo formulario";
+
+        .cuerpoContacto {
+            grid-area: cuerpo;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 130%;
+                margin-top: 50px;
+                text-align: center;
+                width: 250px;
+            }
+
+
+
+        }
+
+        .formulario {
+            grid-area: formulario;
+            margin-left: 100px;
+
+            .field {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    width: 350px;
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+
+                    margin-bottom: 10px;
+                }
+
+                .prefTel {
+
+                    .radio {
+                        margin-left: 10px;
+                    }
+                }
+
+                .prefMail {
+
+                    .radio {
+                        margin-left: 10px;
+                    }
+
+                }
+
+                .consulta {
+                    margin-top: 25px;
+                    width: 350px;
+                }
+
+
+
+
+
+            }
+
+
+        }
+
+
+    }
+
+
+
+    /* FOOTER */
 
 
     footer {
         background-color: black;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-between;
-        width: 100%;
+
+        width: 100vw;
         align-items: center;
     }
-    
+
     .mapa {
-        margin-left: 180px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .copy {
@@ -822,11 +1041,17 @@ footer {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        margin-right: 20px;
+        margin-right: 5px;
     }
 
     .datosContacto li {
         text-align: center;
+    }
+
+    .listaSiguenos {
+        margin-right: 0px;
+        margin-left: -150px;
+
     }
 
 }
